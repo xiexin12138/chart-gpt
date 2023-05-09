@@ -95,7 +95,7 @@ const HomePage = () => {
 		<div className='flex flex-col px-4 items-center justify-center bg-gradient-to-r from-slate-300 to-indigo-50 overflow-y-hidden'>
 			<Header />
 			<Head>
-				<title>AI tool to convert text to a beautiful chart</title>
+				<title>AI工具 - 文本转换为好看的图表</title>
 			</Head>
 			<Card className='w-full max-w-xl mb-6 space-6'>
 				<form onSubmit={handleSubmit} className='w-full max-w-xl mb-1'>
