@@ -96,6 +96,7 @@ const HomePage = () => {
 			<Header />
 			<Head>
 				<title>AI工具 - 文本转换为好看的图表</title>
+				<script async src="https://analytics.umami.is/script.js" data-website-id="32837613-d7cf-4ff0-9c04-ab2751ac52ed"></script>
 			</Head>
 			<Card className='w-full max-w-xl mb-6 space-6'>
 				<form onSubmit={handleSubmit} className='w-full max-w-xl mb-1'>
