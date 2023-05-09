@@ -24,7 +24,7 @@ const CHART_TYPES = [
 ];
 
 const HomePage = () => {
-	const [inputValue, setInputValue] = useState("");
+	const [inputValue, setInputValue] = useState("请用条形图展示数据，星期一-15人，星期二-3人，星期三-45人，星期四-124人，星期五-2人。");
 	const [isLoading, setIsLoading] = useState(false);
 	const [chartType, setChartType] = useState("");
 	const [chartData, setChartData] = useState([]);
