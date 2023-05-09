@@ -111,7 +111,7 @@ const HomePage = () => {
 						<textarea
 							id='input'
 							rows={3}
-							placeholder=''
+							placeholder='请用条形图展示数据，星期一-15人，星期二-3人，星期三-45人，星期四-124人，星期五-2人'
 							className='appearance-none font-inter mt-8 border border-gray-300 dark:border-gray-600 shadow-sm flex flex-col items-center justify-center rounded-lg w-full max-w-md py-2 px-3 bg-custom-gray-bg dark:bg-custom-dark-gray text-gray-700 dark:text-white leading-tight focus:outline-none focus:shadow-outline text-left min-h-[120px] max-h-[200px]'
 							value={inputValue}
 							required
