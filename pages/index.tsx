@@ -51,8 +51,7 @@ const HomePage = () => {
 
 			setChartType(chartTypeResponse.data);
 
-			const libraryPrompt = `Generate a valid JSON in which each element is an object. Strictly using this FORMAT and naming:
-[{ "name": "a", "value": 12, "color": "#4285F4" }] for Recharts API. Make sure field name always stays named name. Instead of naming value field value in JSON, name it based on user metric.\n Make sure the format use double quotes and property names are string literals. \n\n${inputValue}\n Provide JSON data only. `;
+			const libraryPrompt = `生成一个有效的JSON，其中每个元素都是一个对象。严格使用这个格式和命名：\n[{ \"name\": \"a\", \"value\": 12, \"color\": \"#4285F4\" }]，用于Recharts API。确保字段名始终命名为name。在JSON中，将value字段命名为基于用户度量的名称，而不是命名为value。确保格式使用双引号，属性名是字符串字面量。\n\n${inputValue}\n 只提供JSON数据。`;
 
 			const chartDataResponse = await axios.post("/api/parse-graph", {
 				prompt: libraryPrompt,
@@ -105,7 +104,7 @@ const HomePage = () => {
 							htmlFor='textInput'
 							className='block font-inter font-semibold text-gray-700 dark:text-gray-200'
 						>
-							Describe your data with desired Chart type
+							 使用所需的图表类型描述您的数据。
 							<SquigglyLines />
 						</label>
 
@@ -129,7 +128,7 @@ const HomePage = () => {
 							type='submit'
 							className='cursor-pointer font-inter font-semibold py-2 px-10 mt-10 rounded-full blue-button-w-gradient-border text-white text-shadow-0_0_1px_rgba(0,0,0,0.25) shadow-2xl flex flex-row items-center justify-center'
 						>
-							Draw
+							开始画
 						</button>
 					</div>
 				</form>
@@ -171,7 +170,6 @@ const HomePage = () => {
 			)}
 			<InfoSection />
 			<footer className='text-center font-inter text-gray-700 text-sm mb-4'>
-				Made with ❤️ using React, Next.js, Recharts, OpenAI and Tailwind CSS
 			</footer>
 		</div>
 	);
