@@ -63,7 +63,7 @@ const HomePage = () => {
 				parsedData = JSON.parse(chartDataResponse.data);
 			} catch (error) {
 				setError(true);
-				console.error("Failed to parse chart data:", error);
+				console.error("解析图表数据失败:", error);
 			}
 
 			setChartData(parsedData);
@@ -71,7 +71,7 @@ const HomePage = () => {
 			setShouldRenderChart(true);
 		} catch (error) {
 			setError(true);
-			console.error("Failed to generate graph data:", error);
+			console.error("生成图表数据失败:", error);
 		} finally {
 			setIsLoading(false);
 		}
@@ -128,7 +128,7 @@ const HomePage = () => {
 							type='submit'
 							className='cursor-pointer font-inter font-semibold py-2 px-10 mt-10 rounded-full blue-button-w-gradient-border text-white text-shadow-0_0_1px_rgba(0,0,0,0.25) shadow-2xl flex flex-row items-center justify-center'
 						>
-							开始画
+							绘制图表
 						</button>
 					</div>
 				</form>
@@ -139,7 +139,7 @@ const HomePage = () => {
 					title='Ooops! Could not generate'
 					color='rose'
 				>
-					Try again later or restructure your request.
+					请稍后再试或重新构建您的请求。
 				</Callout>
 			) : (
 				<div className='w-full max-w-xl mb-6 p-4'>
@@ -160,7 +160,7 @@ const HomePage = () => {
 										className='cursor-pointer font-inter font-semibold py-2 px-4 mt-10 rounded-full blue-button-w-gradient-border text-white text-shadow-0_0_1px_rgba(0,0,0,0.25) shadow-2xl flex flex-row items-center justify-center'
 										onClick={() => handleCaptureClick(".recharts-wrapper")}
 									>
-										Download
+										下载保存
 									</button>
 								</div>
 							</>
