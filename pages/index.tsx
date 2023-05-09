@@ -51,7 +51,7 @@ const HomePage = () => {
 
 			setChartType(chartTypeResponse.data);
 
-			const libraryPrompt = `生成一个有效的JSON，其中每个元素都是一个对象。严格使用这个格式和命名：\n[{ \"name\": \"a\", \"value\": 12, \"color\": \"#4285F4\" }]，用于Recharts API。确保字段名始终命名为name。在JSON中，将value字段命名为基于用户度量的名称，而不是命名为value。确保格式使用双引号，属性名是字符串字面量。\n\n${inputValue}\n 只提供JSON数据。`;
+			const libraryPrompt = `生成一个有效的JSON，其中每个元素都是一个对象。严格使用这个格式和命名：\n[{ \"name\": \"a\", \"value\": 12, \"color\": \"#4285F4\" }]，用于Recharts API。确保字段名始终命名为name。在JSON中，将value字段命名为基于用户度量的名称，而不是命名为value，默认使用中文。确保格式使用双引号，属性名是字符串字面量。\n\n${inputValue}\n 只提供JSON数据。`;
 
 			const chartDataResponse = await axios.post("/api/parse-graph", {
 				prompt: libraryPrompt,
