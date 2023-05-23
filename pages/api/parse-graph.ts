@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 
-const OPENAI_API_URL = "/v1/chat/completions";
+const OPENAI_API_URL = "https://gpthink.top/v1/chat/completions";
 
 export default async function handler(
   req: NextApiRequest,
