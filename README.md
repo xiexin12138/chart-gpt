@@ -31,6 +31,10 @@ yarn dev
 
 This will start the development server at http://localhost:3000.
 
+# 体验地址
+
+https://chart.aigc123.site
+
 ## Contributing
 
 If you would like to contribute to this project, please follow these steps:
